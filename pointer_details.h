@@ -15,3 +15,7 @@ class PtrDetails {
         };
 }
 
+template <class T>
+bool operator==(const PtrDetails<T> &obj_1, const PtrDetails<T> &obj_2){
+    
+}
