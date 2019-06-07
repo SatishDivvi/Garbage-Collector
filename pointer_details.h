@@ -4,4 +4,5 @@ class ptrDetails {
         unsigned refCount;
         T *memPtr;
         bool isArray;
+        unsigned arraySize;
 }
