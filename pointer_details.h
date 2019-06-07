@@ -5,4 +5,7 @@ class ptrDetails {
         T *memPtr;
         bool isArray;
         unsigned arraySize;
+        ptrDetails(T *ptr, unsigned size = 0) {
+
+        };
 }
