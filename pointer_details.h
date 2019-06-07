@@ -8,11 +8,12 @@ class PtrDetails {
         ptrDetails(T *ptr, unsigned size = 0) {
             refCount = 1;
             memPtr = ptr;
-            if(size > 0)
+            arraySize = size;
+            if(arraySize > 0)
                 isArray = true;
             else
                 isAttay = false;
-            arraySize = size;
+            
         };
 }
 
