@@ -12,7 +12,7 @@ class PtrDetails {
             if(arraySize > 0)
                 isArray = true;
             else
-                isAttay = false;
+                isArray = false;
             
         };
 }
