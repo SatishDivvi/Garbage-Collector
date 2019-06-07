@@ -12,6 +12,7 @@ class PtrDetails {
                 isArray = true;
             else
                 isAttay = false;
+            arraySize = size;
         };
 }
 
