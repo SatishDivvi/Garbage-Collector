@@ -118,6 +118,7 @@ Pointer<T,size>::Pointer(const Pointer &ob){
     // TODO: Implement Pointer constructor
     // Lab: Smart Pointer Project Lab
     typename std::list<PtrDetails<T> >::iterator p;
+    p = findPtrInfo(ob.addr);
 }
 
 // Destructor for Pointer.
