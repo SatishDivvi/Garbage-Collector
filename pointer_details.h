@@ -17,5 +17,5 @@ class PtrDetails {
 
 template <class T>
 bool operator==(const PtrDetails<T> &obj_1, const PtrDetails<T> &obj_2){
-    
+    return obj_1.memPtr == obj_2.memPtr;
 }
