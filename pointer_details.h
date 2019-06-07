@@ -1,5 +1,5 @@
 template <class T>
-class ptrDetails {
+class PtrDetails {
     public:
         unsigned refCount;
         T *memPtr;
@@ -14,3 +14,4 @@ class ptrDetails {
                 isAttay = false;
         };
 }
+
