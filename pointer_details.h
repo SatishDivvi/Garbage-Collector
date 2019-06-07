@@ -3,4 +3,5 @@ class ptrDetails {
     public:
         unsigned refCount;
         T *memPtr;
+        bool isArray;
 }
