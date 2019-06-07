@@ -120,6 +120,12 @@ Pointer<T,size>::Pointer(const Pointer &ob){
     typename std::list<PtrDetails<T> >::iterator p;
     p = findPtrInfo(ob.addr);
     p->refCount++;
+    addr = ob.addr;
+    arraySize = ob.arraySize;
+    if(arraySize > 0)
+        isArray = true
+    else
+        isArray = false 
 }
 
 // Destructor for Pointer.
