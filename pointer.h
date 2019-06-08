@@ -153,11 +153,16 @@ bool Pointer<T, size>::collect(){
             if(p->refCount > 0)
                 continue
             freeMemory = true;
-
-            // Remove unused entry from refContainer.
-
-            // Free memory unless the Pointer is null.
             
+            // Remove unused entry from refContainer.
+            refContainer.remove(*p);
+            // Free memory unless the Pointer is null.
+            if(p->memPtr){
+                if(p->isArray)
+                    delete[] p->memPtr;
+                else
+                    delete p->memPtr;
+            }
             // Restart the search.
             break;
         }
