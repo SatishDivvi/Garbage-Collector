@@ -218,7 +218,7 @@ Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv){
     p = findPtrInfo(rv.addr);
     p->refcount++;
     addr = rv.addr;
-    return rv;
+    return addr;
 }
 
 // A utility function that displays refContainer.
