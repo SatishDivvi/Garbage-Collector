@@ -123,7 +123,7 @@ Pointer<T,size>::Pointer(T *t){
     	isArray = false;
 
     if(isArray)
-        delete[] t
+        delete[] t;
     else
         delete t;
 
