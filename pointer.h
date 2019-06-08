@@ -147,7 +147,7 @@ bool Pointer<T, size>::collect(){
     if(p->refCount > 0)
         continue
     
-    return false;
+    return freeMemory;
 }
 
 // Overload assignment of pointer to Pointer.
