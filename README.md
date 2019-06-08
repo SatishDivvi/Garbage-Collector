@@ -1,4 +1,4 @@
-# System Monitor
+# Garbage Collector
 
 ### Introduction:
 
