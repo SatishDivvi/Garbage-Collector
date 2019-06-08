@@ -204,7 +204,7 @@ T *Pointer<T, size>::operator=(T *t){
     arraySize = refContainerSize();
     if(arraySize > 0)
         isArray = true;
-    else:
+    else
         isArray = false;
     addr = t;
     delete t;
