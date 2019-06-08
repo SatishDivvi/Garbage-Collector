@@ -1,3 +1,6 @@
+#ifndef ITERATOR_H
+#define ITERATOR_H
+
 // Exception thrown when an attempt is made to
 // use an Iter that exceeds the range of the
 // underlying object.
@@ -135,3 +138,5 @@ class Iter
         return ptr - itr2.ptr;
     }
 };
+
+#endif
