@@ -16,6 +16,9 @@ Garbage Collector implemented using **Reference Counting Algorithm**. The algori
 
 ### Screenshots:
 
+- Memory Leakage Result:
+
+![Login](/img/result.PNG)
 
 ### Author
 
