@@ -223,6 +223,10 @@ Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv){
     p = findPtrInfo(rv.addr);
     p->refcount++;
     addr = rv.addr;
+     if (arraySize > 0)
+        isArray = true;
+    else
+        isArray = false;
     rv.~Pointer();
     return addr;
 }
