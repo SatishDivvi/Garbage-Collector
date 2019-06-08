@@ -143,9 +143,10 @@ Pointer<T, size>::~Pointer(){
     
     // TODO: Implement Pointer destructor
     // Lab: New and Delete Project Lab
-    typename std::list<PtrDetails<T> >::iterator p;
+    typename std::list<PtrDetails<T>>::iterator p;
     p = findPtrInfo(addr);
-    p->refcount--;
+    if(p->refcount)
+    	p->refcount--;
     collect();
 }
 
@@ -156,31 +157,31 @@ bool Pointer<T, size>::collect(){
     // TODO: Implement collect function
     // LAB: New and Delete Project Lab
     // Note: collect() will be called in the destructor
-    freeMemory = false;
+    bool freeMemory = false;
     typename std::list<PtrDetails<T> >::iterator p;
     do{
         // Scan refContainer looking for unreferenced pointers.
         for (p = refContainer.begin(); p != refContainer.end(); p++){
-            // TODO: Implement collect()
             // If in-use, skip.
-            if(p->refcount > 0)
-                continue
+            if (p->refcount > 0)
+                continue;
             freeMemory = true;
-            
             // Remove unused entry from refContainer.
             refContainer.remove(*p);
+
             // Free memory unless the Pointer is null.
-            if(p->memPtr){
-                if(p->isArray)
-                    delete[] p->memPtr;
-                else
-                    delete p->memPtr;
+            if (p->memPtr){
+                if (p->isArray){
+                    delete[] p->memPtr; // delete array
+                }
+                else{
+                    delete p->memPtr; // delete single element
+                }
             }
             // Restart the search.
             break;
         }
     } while (p != refContainer.end());
-    
     return freeMemory;
 }
 
@@ -191,10 +192,12 @@ T *Pointer<T, size>::operator=(T *t){
     // TODO: Implement operator==
     // LAB: Smart Pointer Project Lab
     typename std::list<PtrDetails<T> >::iterator p;
-
     p = findPtrInfo(addr);
     p->refcount--;
-    p = findPtrInfo(&t);
+    p = findPtrInfo(t);
+    p->refcount++;
+    addr = t;
+    return t;
 
 }
 // Overload assignment of Pointer to Pointer.
