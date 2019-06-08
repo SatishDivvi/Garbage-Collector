@@ -10,6 +10,10 @@ Garbage Collector implemented using **Reference Counting Algorithm**. The algori
 
 ### Project Execution:
 
+1. Compile `SystemMonitor.cpp` file by executing command `g++ -std=c++17 GarbageCollector.cpp`.
+2. Execute command `./a.out`.
+3. Results should now be displayed on the screen.
+
 ### Screenshots:
 
 
