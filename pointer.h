@@ -162,7 +162,12 @@ Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv){
     // TODO: Implement operator==
     // LAB: Smart Pointer Project Lab
     typename std::list<PtrDetails<T> >::iterator p;
-
+    p = findPtrInfo(addr);
+    p->refcount--;
+    p = findPtrInfo(rv.addr);
+    p->refcount++;
+    addr = rv.addr;
+    return rv;
 }
 
 // A utility function that displays refContainer.
