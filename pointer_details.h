@@ -1,3 +1,6 @@
+#ifndef POINTER_DETAILS_H
+#define POINTER_DETAILS_H
+
 template <class T>
 class PtrDetails {
     public:
@@ -20,3 +23,5 @@ template <class T>
 bool operator==(const PtrDetails<T> &obj_1, const PtrDetails<T> &obj_2){
     return obj_1.memPtr == obj_2.memPtr;
 }
+
+#endif
