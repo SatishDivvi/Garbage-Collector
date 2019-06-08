@@ -135,9 +135,9 @@ Pointer<T,size>::Pointer(const Pointer &ob){
     addr = ob.addr;
     arraySize = ob.arraySize;
     if(arraySize > 0)
-        isArray = true
+        isArray = true;
     else
-        isArray = false 
+        isArray = false; 
 }
 
 // Destructor for Pointer.
