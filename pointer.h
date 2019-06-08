@@ -201,6 +201,11 @@ T *Pointer<T, size>::operator=(T *t){
     p->refcount--;
     p = findPtrInfo(t);
     p->refcount++;
+    arraySize = refContainerSize();
+    if(arraySize > 0)
+        isArray = true;
+    else:
+        isArray = false;
     addr = t;
     delete t;
     return addr;
