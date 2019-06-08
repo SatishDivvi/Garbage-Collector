@@ -122,7 +122,10 @@ Pointer<T,size>::Pointer(T *t){
     else
     	isArray = false;
 
-    delete t;
+    if(isArray)
+        delete[] t
+    else
+        delete t;
 
 }
 // Copy constructor.
