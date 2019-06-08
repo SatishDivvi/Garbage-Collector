@@ -6,6 +6,8 @@ Garbage Collector implemented using **Reference Counting Algorithm**. The algori
 
 ### Installation:
 
+1. Clone the repository using command `git clone https://github.com/SatishDivvi/Garbage-Collector.git`.
+
 ### Project Execution:
 
 ### Screenshots:
