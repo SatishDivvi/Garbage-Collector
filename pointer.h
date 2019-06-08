@@ -122,6 +122,8 @@ Pointer<T,size>::Pointer(T *t){
     else
     	isArray = false;
 
+    delete t;
+
 }
 // Copy constructor.
 template< class T, int size>
@@ -200,7 +202,6 @@ T *Pointer<T, size>::operator=(T *t){
     p = findPtrInfo(t);
     p->refcount++;
     addr = t;
-    return t;
 
 }
 // Overload assignment of Pointer to Pointer.
