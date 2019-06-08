@@ -5,7 +5,7 @@ class PtrDetails {
         T *memPtr;
         bool isArray;
         unsigned arraySize;
-        ptrDetails(T *ptr, unsigned size = 0) {
+        PtrDetails(T *ptr, unsigned size = 0) {
             refCount = 1;
             memPtr = ptr;
             arraySize = size;
@@ -13,7 +13,6 @@ class PtrDetails {
                 isArray = true;
             else
                 isArray = false;
-            
         };
 }
 
