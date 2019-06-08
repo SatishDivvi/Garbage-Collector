@@ -202,6 +202,8 @@ T *Pointer<T, size>::operator=(T *t){
     p = findPtrInfo(t);
     p->refcount++;
     addr = t;
+    delete t;
+    return addr;
 
 }
 // Overload assignment of Pointer to Pointer.
