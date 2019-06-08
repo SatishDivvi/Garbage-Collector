@@ -17,7 +17,7 @@ class PtrDetails {
             else
                 isArray = false;
         };
-}
+};
 
 template <class T>
 bool operator==(const PtrDetails<T> &obj_1, const PtrDetails<T> &obj_2){
