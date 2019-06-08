@@ -137,6 +137,7 @@ Pointer<T, size>::~Pointer(){
     typename std::list<PtrDetails<T> >::iterator p;
     p = findPtrInfo(addr);
     p->refCount--;
+    collect();
 }
 
 // Collect garbage. Returns true if at least
