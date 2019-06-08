@@ -207,7 +207,10 @@ T *Pointer<T, size>::operator=(T *t){
     else
         isArray = false;
     addr = t;
-    delete t;
+    if(isArray)
+        delete[] t;
+    else
+        delete t;
     return addr;
 
 }
