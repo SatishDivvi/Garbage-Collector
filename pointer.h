@@ -218,6 +218,7 @@ Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv){
     p = findPtrInfo(rv.addr);
     p->refcount++;
     addr = rv.addr;
+    rv.~Pointer();
     return addr;
 }
 
