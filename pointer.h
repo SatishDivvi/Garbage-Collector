@@ -1,3 +1,6 @@
+#ifndef POINTER_H
+#define POINTER_H
+
 #include <iostream>
 #include <list>
 #include <typeinfo>
@@ -261,3 +264,5 @@ void Pointer<T, size>::shutdown(){
     }
     collect();
 }
+
+#endif
