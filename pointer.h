@@ -136,6 +136,7 @@ Pointer<T, size>::~Pointer(){
     // Lab: New and Delete Project Lab
     typename std::list<PtrDetails<T> >::iterator p;
     p = findPtrInfo(addr);
+    p->refCount--;
 }
 
 // Collect garbage. Returns true if at least
