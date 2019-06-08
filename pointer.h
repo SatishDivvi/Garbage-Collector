@@ -140,10 +140,12 @@ Pointer<T, size>::~Pointer(){
 // one object was freed.
 template <class T, int size>
 bool Pointer<T, size>::collect(){
-
     // TODO: Implement collect function
     // LAB: New and Delete Project Lab
     // Note: collect() will be called in the destructor
+    if(p->refCount > 0)
+        continue
+    
     return false;
 }
 
@@ -159,7 +161,7 @@ T *Pointer<T, size>::operator=(T *t){
 template <class T, int size>
 Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv){
 
-    // TODO: Implement operator==
+    // TODO: Implement operator=
     // LAB: Smart Pointer Project Lab
     typename std::list<PtrDetails<T> >::iterator p;
     p = findPtrInfo(addr);
