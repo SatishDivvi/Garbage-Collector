@@ -144,8 +144,24 @@ bool Pointer<T, size>::collect(){
     // TODO: Implement collect function
     // LAB: New and Delete Project Lab
     // Note: collect() will be called in the destructor
-    if(p->refCount > 0)
-        continue
+    typename std::list<PtrDetails<T> >::iterator p;
+    do{
+        // Scan refContainer looking for unreferenced pointers.
+        for (p = refContainer.begin(); p != refContainer.end(); p++){
+            // TODO: Implement collect()
+            // If in-use, skip.
+            if(p->refCount > 0)
+                continue
+            freeMemory = true;
+
+            // Remove unused entry from refContainer.
+
+            // Free memory unless the Pointer is null.
+            
+            // Restart the search.
+            break;
+        }
+    } while (p != refContainer.end());
     
     return freeMemory;
 }
